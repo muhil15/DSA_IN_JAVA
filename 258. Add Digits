@@ -1,0 +1,31 @@
+DAY 1
+
+public class Solution {
+    public static int addDigits(int num) {
+        int result = 0;
+
+       
+        while (num >= 10) {
+            result = 0;
+
+            while (num > 0) {
+                int digit = num % 10;
+                num = num / 10;          
+                result += digit;      
+                
+            }
+
+            num = result;  
+        }
+
+        return num;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+
+        int num =  a;  
+        System.out.println(addDigits(num)); 
+    }
+}
