@@ -1,0 +1,27 @@
+public class Solution {
+    public boolean canAliceWin(int[] nums) {
+        int singleSum = 0;
+        int doubleSum = 0;
+        int totalSum = 0;
+
+        for (int num : nums) {
+            totalSum += num;
+            if (num >= 1 && num <= 9) {
+                singleSum += num;
+            } else if (num >= 10 && num <= 99) {
+                doubleSum += num;
+            }
+        }
+
+        
+        if (singleSum > totalSum - singleSum) {
+            return true;
+        }
+
+      else if(doubleSum > totalSum - doubleSum) {
+            return true;
+        }
+
+        return false;
+    }
+}
