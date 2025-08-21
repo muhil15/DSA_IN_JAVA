@@ -1,0 +1,27 @@
+Method 1:
+
+class Solution {
+    public String toLowerCase(String s) {
+         StringBuilder result = new StringBuilder();
+        
+        int len=s.length();
+        for(int i=0;i<len;i++){
+            char c=s.charAt(i);
+            char convert=Character.toLowerCase(c);
+            result.append(convert);
+        }
+       
+        
+        return result.toString();
+    }
+}
+
+Method 2:
+
+class Solution {
+    public String toLowerCase(String s) {
+         
+         String convert=s.toLowerCase();
+         return convert;
+    }
+}
